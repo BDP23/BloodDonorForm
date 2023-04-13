@@ -21,11 +21,20 @@ namespace BloodDonorForm
         {
             string firstName = tbFirstName.Text;
             string lastName = tbLastName.Text;
-            string dateOfBirth = dtpDateofBirth.Value.ToString();
+            var dateOfBirth = dtpDateofBirth.Value.ToString();
+            var bloodType = cbBloodGroup.SelectedItem;
+            string address = tbAddress.Text;
+
+            if(string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            {
+                MessageBox.Show("Please enter missing data. ");
+            }
             
-                MessageBox.Show($"FirstName: {firstName}/n/r" +
-                    $"LastName: {tbLastName}/n/r" +
-                    $"Date of Birth: {dtpDateofBirth}/n/r" +
+                MessageBox.Show($"FirstName: {firstName}\n\r" +
+                    $"LastName: {tbLastName}\n\r" +
+                    $"Address: {tbAddress}\n\r" +
+                    $"Date of Birth: {dtpDateofBirth}\n\r" +
+                    $"Blood Group:  {cbBloodGroup}\n\r" +
                     $"THANK YOU FOR DONATING!!"
                     );
         }

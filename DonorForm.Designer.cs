@@ -44,7 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtpDateofBirth = new System.Windows.Forms.DateTimePicker();
             this.cbGender = new System.Windows.Forms.ComboBox();
@@ -202,13 +202,13 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "City/Parish";
             // 
-            // textBox10
+            // tbAddress
             // 
-            this.textBox10.Location = new System.Drawing.Point(12, 240);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(229, 32);
-            this.textBox10.TabIndex = 20;
+            this.tbAddress.Location = new System.Drawing.Point(12, 240);
+            this.tbAddress.Multiline = true;
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(229, 32);
+            this.tbAddress.TabIndex = 20;
             // 
             // label11
             // 
@@ -285,7 +285,7 @@
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.dtpDateofBirth);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -330,7 +330,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpDateofBirth;
         private System.Windows.Forms.ComboBox cbGender;
