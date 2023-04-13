@@ -19,24 +19,42 @@ namespace BloodDonorForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string firstName = tbFirstName.Text;
-            string lastName = tbLastName.Text;
-            var dateOfBirth = dtpDateofBirth.Value.ToString();
-            var bloodType = cbBloodGroup.SelectedItem;
-            string address = tbAddress.Text;
-
-            if(string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            try
             {
-                MessageBox.Show("Please enter missing data. ");
+                string firstName = tbFirstName.Text;
+                string lastName = tbLastName.Text;
+                var dateOfBirth = dtpDateofBirth.Value;
+                var bloodType = cbBloodGroup.SelectedItem;
+                string address = tbAddress.Text;
+
+                var isValid = true;
+
+                if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+                {
+                    isValid = false;
+                    MessageBox.Show("Please enter missing data!");
+
+
+                }
+                if (isValid == true)
+                {
+                    MessageBox.Show($"FirstName: {firstName}\n\r" +
+                       $"LastName: {tbLastName}\n\r" +
+                       $"Address: {tbAddress}\n\r" +
+                       $"Date of Birth: {dtpDateofBirth}\n\r" +
+                       $"Blood Group:  {cbBloodGroup}\n\r" +
+                       $"THANK YOU FOR DONATING!!"
+                       );
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+                
             
-                MessageBox.Show($"FirstName: {firstName}\n\r" +
-                    $"LastName: {tbLastName}\n\r" +
-                    $"Address: {tbAddress}\n\r" +
-                    $"Date of Birth: {dtpDateofBirth}\n\r" +
-                    $"Blood Group:  {cbBloodGroup}\n\r" +
-                    $"THANK YOU FOR DONATING!!"
-                    );
+               
         }
 
         private void label11_Click(object sender, EventArgs e)

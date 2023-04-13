@@ -223,13 +223,14 @@
             // 
             // dtpDateofBirth
             // 
-            this.dtpDateofBirth.Location = new System.Drawing.Point(271, 374);
+            this.dtpDateofBirth.Location = new System.Drawing.Point(271, 373);
             this.dtpDateofBirth.Name = "dtpDateofBirth";
             this.dtpDateofBirth.Size = new System.Drawing.Size(189, 20);
             this.dtpDateofBirth.TabIndex = 22;
             // 
             // cbGender
             // 
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Male",
@@ -241,6 +242,7 @@
             // 
             // cbBloodGroup
             // 
+            this.cbBloodGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBloodGroup.FormattingEnabled = true;
             this.cbBloodGroup.Items.AddRange(new object[] {
             "A",
@@ -255,6 +257,7 @@
             // 
             // cbCity
             // 
+            this.cbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCity.FormattingEnabled = true;
             this.cbCity.Items.AddRange(new object[] {
             "Clarendon",
